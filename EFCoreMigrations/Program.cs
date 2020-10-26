@@ -26,6 +26,6 @@ namespace EFCoreMigrations
         public int Id { get; set; }
         public string Title { get; set; }
         public string Activity { get; set; }
-        public DateTime? Entered { get; set; }
+        public DateTime? EnteredDate { get; set; }
     }
 }
