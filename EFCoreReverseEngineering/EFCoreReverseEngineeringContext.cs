@@ -30,8 +30,6 @@ namespace EFCoreReverseEngineering
         {
             modelBuilder.Entity<Residents>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Activity)
                     .IsRequired()
                     .HasMaxLength(50);
