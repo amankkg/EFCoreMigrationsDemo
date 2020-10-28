@@ -37,8 +37,8 @@ namespace EFCoreMigrations
             //await db.SaveChangesAsync();
 
             var education = await db.Activities
-                .Include(a => a.ResidentActivities)
-                .ThenInclude(a => a.Resident)
+                //.Include(a => a.ResidentActivities)
+                //.ThenInclude(a => a.Resident)
                 .FirstAsync();
 
             var educationProviders = education.ResidentActivities
@@ -55,6 +55,7 @@ namespace EFCoreMigrations
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
             builder
+                .UseLazyLoadingProxies()
                 .UseSqlServer(@"Server=AMANK-XPS-9360\SQLEXPRESS; Database=EFCoreMigrations; Integrated Security=true");
         }
 
@@ -81,7 +82,7 @@ namespace EFCoreMigrations
         public string Title { get; set; }
         public DateTime? EnteredDate { get; set; }
         //public ICollection<Activity> Activities { get; set; }
-        public ICollection<ResidentActivity> ResidentActivities { get; set; }
+        public virtual ICollection<ResidentActivity> ResidentActivities { get; set; }
     }
 
     class Activity
@@ -89,7 +90,7 @@ namespace EFCoreMigrations
         public int Id { get; set; }
         public string Title { get; set; }
         //public ICollection<Resident> Residents { get; set; }
-        public ICollection<ResidentActivity> ResidentActivities { get; set; }
+        public virtual ICollection<ResidentActivity> ResidentActivities { get; set; }
     }
 
     class ResidentActivity
@@ -97,7 +98,7 @@ namespace EFCoreMigrations
         public int ResidentId { get; set; }
         public int ActivityId { get; set; }
 
-        public Resident Resident { get; set; }
-        public Activity Activity { get; set; }
+        public virtual Resident Resident { get; set; }
+        public virtual Activity Activity { get; set; }
     }
 }
