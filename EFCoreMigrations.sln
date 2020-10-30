@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreMigrations", "EFCoreMigrations\EFCoreMigrations.csproj", "{0ADF29E1-3EE7-4957-BC47-2BC998D29C28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreReverseEngineering", "EFCoreReverseEngineering\EFCoreReverseEngineering.csproj", "{6F96502B-67B8-4535-A3F2-527401CD1FA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreReverseEngineering", "EFCoreReverseEngineering\EFCoreReverseEngineering.csproj", "{6F96502B-67B8-4535-A3F2-527401CD1FA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreInheritance", "EFCoreInheritance\EFCoreInheritance.csproj", "{3C9BD71A-6D33-44C6-87E6-9A2CC07EF66E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6F96502B-67B8-4535-A3F2-527401CD1FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F96502B-67B8-4535-A3F2-527401CD1FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F96502B-67B8-4535-A3F2-527401CD1FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C9BD71A-6D33-44C6-87E6-9A2CC07EF66E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C9BD71A-6D33-44C6-87E6-9A2CC07EF66E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C9BD71A-6D33-44C6-87E6-9A2CC07EF66E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C9BD71A-6D33-44C6-87E6-9A2CC07EF66E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
